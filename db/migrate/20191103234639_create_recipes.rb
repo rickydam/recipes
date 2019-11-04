@@ -4,7 +4,7 @@ class CreateRecipes < ActiveRecord::Migration[5.2]
       t.string :name, null: false
       t.text :ingredients, null: false
       t.text :instruction, null: false
-      t.string :image
+      t.string :image, default: 'https://raw.githubusercontent.com/rickydam/recipes/master/app/assets/images/food.jpg'
 
       t.timestamps
     end
