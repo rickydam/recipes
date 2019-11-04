@@ -14,6 +14,11 @@ class Api::V1::RecipesController < ApplicationController
   end
 
   def show
+    if recipe
+      render json: recipe
+    else
+      render json: recipe.errors
+    end
   end
 
   def destroy
@@ -23,5 +28,9 @@ class Api::V1::RecipesController < ApplicationController
 
   def recipe_params
     params.permit(:name, :image, :ingredients, :instruction)
+  end
+
+  def recipe
+    @recipe ||= Recipe.find(params[:id])
   end
 end
