@@ -28,7 +28,7 @@ class Recipes extends React.Component {
             <div key={index} className="col-md-6 col-lg-4">
                 <div className="card mb-4">
                     <img
-                        src={recipe.img}
+                        src={recipe.image}
                         className="card-img-top"
                         alt={`${recipe.name} image`}
                     />
