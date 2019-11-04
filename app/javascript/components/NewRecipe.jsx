@@ -13,6 +13,12 @@ class NewRecipe extends React.Component {
         this.onSubmit = this.onSubmit.bind(this);
         this.stripHtmlEntities = this.stripHtmlEntities.bind(this);
     }
+
+    stripHtmlEntities(str) {
+        return String(str)
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;");
+    }
 }
 
 export default NewRecipe;
