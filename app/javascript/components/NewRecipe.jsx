@@ -31,7 +31,7 @@ class NewRecipe extends React.Component {
         const url = "/api/v1/recipes/create";
         const { name, ingredients, instruction } = this.state;
 
-        if (name.length === 0 || ingrendients.length === 0 || instruction.length === 0) {
+        if (name.length === 0 || ingredients.length === 0 || instruction.length === 0) {
             return;
         }
 
@@ -41,7 +41,7 @@ class NewRecipe extends React.Component {
             instruction: instruction.replace(/\n/g, "<br> <br>")
         };
 
-        const token = document.querySelector('meta[name="csrf-token]').content;
+        const token = document.querySelector('meta[name="csrf-token"]').content;
         fetch(url, {
             method: "POST",
             headers: {
