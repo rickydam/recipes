@@ -95,9 +95,8 @@ class NewRecipe extends React.Component {
                                 </small>
                             </div>
                             <label htmlFor="instruction">Preparation Instructions</label>
-                            <input
+                            <textarea
                                 className="form-control"
-                                type="text"
                                 id="instruction"
                                 name="instruction"
                                 rows="5"
